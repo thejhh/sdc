@@ -1,0 +1,36 @@
+
+$ apt-get install curl
+$ apt-get install subversion
+
+
+$ adduser --gecos SDC --disabled-password sdc
+Adding user `sdc' ...
+Adding new user `sdc' (1002) with group `users' ...
+Creating home directory `/home/users/sdc' ...
+Copying files from `/etc/skel' ...
+
+$ su -l sdc
+
+$ svn checkout https://svn.sendanor.fi/svn/jhh/sdc/trunk/collectors
+A    collectors/sdc-client.pl
+A    collectors/proc-memory.sh
+A    collectors/proc-diskstats.sh
+A    collectors/run-all.sh
+A    collectors/stat.sh
+A    collectors/crontab.txt
+A    collectors/proc-loadavg.sh
+A    collectors/proc-swaps.sh
+A    collectors/proc-vmstat.sh
+A    collectors/sdc-client-sample.conf
+A    collectors/proc-acpi-thermal_zone.sh
+A    collectors/proc-net-dev.sh
+A    collectors/proc-uptime.sh
+A    collectors/proc-acpi-battery.sh
+Checked out revision 181.
+
+$ echo '\sdc,jheusala@sendanor.fi' > .forward
+$ cp collectors/sdc-client-sample.conf .sdc-client.conf
+$ chmod 600 .sdc-client.conf
+$ nano .sdc-client.conf
+$ crontab collectors/crontab.txt
+$ exit

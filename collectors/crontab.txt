@@ -1,0 +1,2 @@
+# Run collectors every 5 minutes
+*/5 * * * *       $HOME/collectors/run-all.sh

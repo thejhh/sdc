@@ -1,0 +1,13 @@
+{"config":{
+  "database":{
+    "database":"sdc",
+    "password":"secret",
+    "type":"mysql",
+    "table_prefix":"sdc_",
+    "username":"sdc"
+  },
+  "session":{
+    "dir":"./session"
+  }
+ }
+}

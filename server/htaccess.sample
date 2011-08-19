@@ -1,0 +1,5 @@
+AddDefaultCharset UTF-8
+
+require user jhh
+require group staff
+require group sdc

@@ -1,0 +1,9 @@
+
+SECURITY RISKS
+* Current sdc-client.pl uses curl with -u-argument -- which is a security risk if other users can see process arguments.
+** sdc-client.pl uses --netrc instead of -u if $HOME/.netrc exist
+** support for curl could be removed using LWP
+* Collectors
+** iscsiadm --stats
+** lvm
+** nfs /proc/fs/nfsd
