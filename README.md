@@ -6,6 +6,8 @@ Historical Note
 
 This is one of my old projects that still use OpenJS instead of Node.js.
 
+Original SVN repository: https://svn.sendanor.fi/svn/jhh/sdc/trunk
+
 Description
 -----------
 
